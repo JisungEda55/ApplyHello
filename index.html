@@ -29,7 +29,7 @@
         /* 업무 정보 박스 스타일 */
         .job-info {
             background-color: #ffffff;
-            padding: 10px;
+            padding: 27px;
             border-radius: 5px;
             font-family: 'TTLaundryGothicB';
             font-size: 16px;
@@ -83,7 +83,33 @@
             border-radius: 10px;
             font-size: 18px;
             cursor: pointer;
-            font-family: 'TTLaundryGothic버 스타일 */
+            font-family: 'TTLaundryGothicB';
+            transition: background-color 0.39s ease, color 0.39s ease;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        /* 복리후생 버튼에 마우스를 올렸을 때 스타일 */
+        .welfare-btn:hover {
+            background-color: #ffffff;
+            color: #ff8282;
+        }
+
+        /* 인재상 버튼 스타일 */
+        .ideal-btn {
+            background-color: #ff8282;
+            color: #ffffff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            font-family: 'TTLaundryGothicB';
+            transition: background-color 0.39s ease, color 0.39s ease;
+            margin-top: 10px
+        }
+
+        /* 인재상 버튼에 마우스를 올렸을 때 스타일 */
         .ideal-btn:hover {
             background-color: #ffffff;
             color: #ff8282;
@@ -127,7 +153,7 @@
         .footer {
             background-color: #f5f5f7; /* 푸터 배경 색상 */
             text-align: center;
-            padding: 0px 0;
+            padding: 1px 0;
             font-family: 'TTLaundryGothicB';
             color: #111111;
             position: absolute;
@@ -140,8 +166,8 @@
 <body>
     <!-- 업무 정보 박스 -->
     <div class="job-info">
-        먼저 지원에 관심을 가져주셔서 감사합니다.<br>
-        본 페이지는 데모페이지 임을 알려드립니다.<br>
+        지원에 관심을 가져주셔서 감사합니다.<br>
+        본 페이지는 영상 편집자의 모집공고임을 알려드립니다.<br>
         <br>
         업무: 영상물 편집자<br>
         업무 장소: 재택근무<br>
@@ -174,23 +200,25 @@
     <div class="ideal-info" id="idealInfo">
         인재상:<br>
         - 창의적인 사고를 가진 사람<br>
-        - 성실하고 적극적인 태도를 가진 사람<br>
-        - 팀워크를 잘 발휘하는 사람<br>
-        - 커뮤니케이션 능력이 뛰어난 사람
+        - 성실하며 적극적인 태도를 가진 사람<br>
+        - 계속 발전하는 사람<br>
+        - 커뮤니케이션 능력이 뛰어난 사람<br>
+        - 채널과 문화에 이해도가 높은 사람
     </div>
 
     <!-- 복리후생 텍스트 박스 -->
     <div class="welfare-info" id="welfareInfo">
         복리후생:<br>
-        - 의료 보험<br>
-        - 연차 휴가<br>
-        - 식사 제공<br>
-        - 교통비 지원
+        - 유튜브 업계 최초 성과급<br>
+        - 기념일 선물<br>
+        - 경조사 지원<br>
+        - 자기계발 지원<br>
+        - 문화/여가 지원
     </div>
 
-    <!-- 자바스크립트 -->
+    <!-- 자바스크립트 기능 추가 -->
     <script>
-        // 인재상 텍스트 박스 토글 
+        // 인재상 텍스트 박스 토글 함수
         function toggleIdealInfo() {
             var idealInfo = document.getElementById("idealInfo");
             if (idealInfo.style.display === "none") {
@@ -200,7 +228,7 @@
             }
         }
 
-        // 복리후생 텍스트 박스 토글
+        // 복리후생 텍스트 박스 토글 함수
         function toggleWelfareInfo() {
             var welfareInfo = document.getElementById("welfareInfo");
             if (welfareInfo.style.display === "none") {
